@@ -1,0 +1,19 @@
+{
+ "titulo": "Monitor de Queimadas · São Paulo",
+ "atualizado_em": "2026-11-03T20:43Z",
+ "ultimo_dia_inpe": null,
+ "dias": 7,
+ "estados": [
+  "SÃO PAULO"
+ ],
+ "total_focos": 2159,
+ "total_alertas": 28,
+ "demo": true,
+ "mapa": {
+  "centro": [
+   -48.6,
+   -22.3
+  ],
+  "zoom": 6.2
+ }
+}

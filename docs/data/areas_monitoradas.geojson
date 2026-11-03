@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "nome": "Fazenda Exemplo · Sertãozinho", "tipo": "Imóvel rural", "raio_m": 3000 },
+      "geometry": { "type": "Polygon", "coordinates": [[
+        [-48.03, -21.17], [-47.99, -21.165], [-47.975, -21.13], [-48.0, -21.11], [-48.035, -21.13], [-48.03, -21.17]
+      ]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nome": "Reserva Exemplo · Botucatu", "tipo": "Unidade de conservação", "raio_m": 2000 },
+      "geometry": { "type": "Polygon", "coordinates": [[
+        [-48.50, -22.92], [-48.44, -22.93], [-48.41, -22.89], [-48.45, -22.85], [-48.49, -22.86], [-48.50, -22.92]
+      ]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "nome": "ETA Exemplo · Ribeirão Preto", "tipo": "Infraestrutura", "raio_m": 5000 },
+      "geometry": { "type": "Point", "coordinates": [-47.80, -21.20] }
+    }
+  ]
+}

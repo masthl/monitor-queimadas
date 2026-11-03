@@ -1,0 +1,14 @@
+{
+  "titulo": "Monitor de Queimadas · São Paulo",
+  "estados": ["SÃO PAULO"],
+  "dias": 7,
+  "satelites_excluir": [],
+  "firms": {
+    "fonte": "VIIRS_NOAA21_NRT",
+    "bbox": [-53.2, -25.4, -44.1, -19.7]
+  },
+  "mapa": {
+    "centro": [-48.6, -22.3],
+    "zoom": 6.2
+  }
+}
