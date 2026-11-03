@@ -198,15 +198,17 @@ const estado = {horas:0, sats:new Set(), mun:"", focos:[], alertas:[], areas:nul
 const ESTILO = {
   version:8,
   sources:{
-    escuro:{type:"raster",tileSize:256,tiles:["a","b","c","d"].map(s=>`https://${s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png`),
-      attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · © <a href="https://carto.com/">CARTO</a>'},
+    escuro:{type:"raster",tileSize:256,tiles:["https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"],
+      maxzoom:16,attribution:"Base © Esri, HERE, Garmin, © OpenStreetMap"},
+    rotulos:{type:"raster",tileSize:256,tiles:["https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}"],maxzoom:16},
     satelite:{type:"raster",tileSize:256,tiles:["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
       attribution:"Imagens © Esri, Maxar, Earthstar Geographics"}
   },
   layers:[
     {id:"bg",type:"background",paint:{"background-color":"#08131F"}},
     {id:"escuro",type:"raster",source:"escuro"},
-    {id:"satelite",type:"raster",source:"satelite",layout:{visibility:"none"}}
+    {id:"satelite",type:"raster",source:"satelite",layout:{visibility:"none"}},
+    {id:"rotulos",type:"raster",source:"rotulos",paint:{"raster-opacity":0.9}}
   ]
 };
 
