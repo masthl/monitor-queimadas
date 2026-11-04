@@ -322,6 +322,9 @@ function atualizar(){
   const fs = filtrados();
   map.getSource("focos").setData({type:"FeatureCollection",features:fs.map(f=>({type:"Feature",
     geometry:{type:"Point",coordinates:[f.lon,f.lat]},properties:f}))});
+  // mapa de calor se ajusta à quantidade de pontos (evita "tudo vermelho")
+  const k = Math.min(1, Math.sqrt(2500/Math.max(fs.length,1)));
+  map.setPaintProperty("calor","heatmap-intensity",["interpolate",["linear"],["zoom"],3,0.6*k,10,2*k]);
 
   // KPIs
   const muns = {}; fs.forEach(f=>{ if(f.mun) muns[f.mun]=(muns[f.mun]||0)+1 });
