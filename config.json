@@ -2,7 +2,8 @@
   "titulo": "Monitor de Queimadas · Brasil",
   "estados": [],
   "dias": 7,
-  "satelites_excluir": ["GOES-19"],
+  "satelites_incluir": ["AQUA_M-T"],
+  "satelites_excluir": [],
   "firms": {
     "fonte": "VIIRS_NOAA21_NRT",
     "bbox": [-74.0, -34.0, -34.0, 5.5]
