@@ -78,6 +78,7 @@ def ler_csv(conteudo: bytes) -> list[dict]:
 def baixar_inpe(dias: int) -> tuple[list[list], str | None]:
     estados = {normalizar(e) for e in CONFIG.get("estados", [])}
     excluir = {s.upper() for s in CONFIG.get("satelites_excluir", [])}
+    incluir = {s.upper() for s in CONFIG.get("satelites_incluir", [])}
     hoje = datetime.now(timezone.utc).date()
     focos, ultimo_dia = [], None
 
@@ -100,7 +101,7 @@ def baixar_inpe(dias: int) -> tuple[list[list], str | None]:
             if estados and normalizar(l.get("estado")) not in estados:
                 continue
             sat = (l.get("satelite") or "").strip()
-            if sat.upper() in excluir:
+            if sat.upper() in excluir or (incluir and sat.upper() not in incluir):
                 continue
             lat, lon = num(l.get("lat"), 5), num(l.get("lon"), 5)
             if lat is None or lon is None:
