@@ -1,10 +1,10 @@
 {
  "titulo": "Monitor de Queimadas · Brasil",
- "atualizado_em": "2026-11-18T00:59Z",
+ "atualizado_em": "2026-11-18T11:50Z",
  "ultimo_dia_inpe": "2026-11-17",
  "dias": 7,
  "estados": [],
- "total_focos": 5812,
+ "total_focos": 5819,
  "total_alertas": 0,
  "demo": false,
  "mapa": {
